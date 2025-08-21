@@ -6,7 +6,8 @@ while True: #loop for frames
     ret,frame = cap.read() # ret is a bool as to whether a frame was read successfully or not , frame is a numpy array ffo the image captured 
     if not ret: 
         break
-    c.imshow("image",frame) # shows frame 
+    flipped_frame = c.flip(frame,1) #flips the frame horizontally 
+    c.imshow("image",flipped_frame) # shows frame 
 
     if c.waitKey(1) and 0xFF == "q":  #wait till a key is pressed in order to exit 
         break
