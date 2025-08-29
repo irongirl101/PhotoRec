@@ -20,7 +20,7 @@ while True: #loop for frames
     frame = c.flip(frame,1)
 
     c.imshow("Face Detect",frame)
-
+ 
     if c.waitKey(1) and 0xFF == "q":  #wait till a key is pressed in order to exit 
         break
 
